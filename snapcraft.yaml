@@ -1,0 +1,55 @@
+name: youtube-dl-casept
+version: "2017.02.27"
+summary: YouTube Downloader
+description: |
+  youtube-dl is a small command-line program to download videos from
+  YouTube.com and a few more sites. This is an unofficial snap based on the one in the snappy playpen.
+
+grade: stable 
+confinement: strict
+
+apps:
+  youtube-dl:
+    command: bin/youtube-dl
+    plugs: [home, network, network-bind]
+
+parts:
+  youtube-dl:
+    source: https://github.com/rg3/youtube-dl/archive/2017.02.27.tar.gz 
+    plugin: python
+    python-version: python3
+
+  ffmpeg:
+    source: https://ffmpeg.org/releases/ffmpeg-3.2.4.tar.xz 
+    plugin: autotools
+    configflags: [--enable-gpl, --enable-libass, --enable-libfreetype, --enable-libmp3lame, --enable-libopus, --enable-libtheora, --enable-libvorbis, --enable-libvpx, --enable-libx264, --enable-libx265, --enable-nonfree]
+    build-packages:
+      - git
+      - g++
+      - make
+      - yasm
+      - autoconf
+      - libtool
+      - cmake
+      - pkg-config
+      - automake
+      - build-essential
+      - libass-dev
+      - libfreetype6-dev
+      - libsdl1.2-dev
+      - libtheora-dev
+      - libva-dev
+      - libvdpau-dev
+      - libvorbis-dev
+      - libxcb1-dev
+      - libxcb-shm0-dev
+      - libxcb-xfixes0-dev
+      - texinfo
+      - zlib1g-dev
+      - libx264-dev
+      - libmp3lame-dev
+      - libopus-dev
+      - libx265-dev
+      - libvpx-dev
+    organize:
+      usr/local/bin: usr/bin
