@@ -1,9 +1,12 @@
 name: youtube-dl-casept
-version: "2017.03.02"
-summary: YouTube Downloader
+version: "2017.03.10"
+summary: YouTube Downloader. READ FULL DESCRIPTION TO DOWNLOAD TO EXTERNAL STORAGE.
 description: |
   youtube-dl is a small command-line program to download videos from
   YouTube.com and a few more sites. This is an unofficial snap based on the one in the snappy playpen.
+  If you wish to download videos to external storage you have to run
+  sudo snap connect youtube-dl-casept:removable-media core:removable-media
+  after installation
 
 grade: stable 
 confinement: strict
@@ -11,11 +14,11 @@ confinement: strict
 apps:
   youtube-dl:
     command: bin/youtube-dl
-    plugs: [home, network, network-bind]
+    plugs: [home, network, network-bind, removable-media]
 
 parts:
   youtube-dl:
-    source: https://github.com/rg3/youtube-dl/archive/2017.03.02.tar.gz 
+    source: https://github.com/rg3/youtube-dl/archive/2017.03.10.tar.gz 
     plugin: python
     python-version: python3
 
