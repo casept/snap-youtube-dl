@@ -23,7 +23,7 @@ parts:
     python-version: python3
 
   ffmpeg:
-    source: https://ffmpeg.org/releases/ffmpeg-3.2.4.tar.xz 
+    source: https://ffmpeg.org/releases/ffmpeg-3.3.1.tar.xz 
     plugin: autotools
     configflags: [--enable-gpl, --enable-libass, --enable-libfreetype, --enable-libmp3lame, --enable-libopus, --enable-libtheora, --enable-libvorbis, --enable-libvpx, --enable-libx264, --enable-libx265, --enable-nonfree]
     build-packages:
