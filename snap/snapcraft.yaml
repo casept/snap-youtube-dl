@@ -1,5 +1,5 @@
 name: youtube-dl-casept
-version: "2017.10.29"
+version: "2017.12.28"
 summary: YouTube Downloader. READ FULL DESCRIPTION TO DOWNLOAD TO EXTERNAL STORAGE.
 description: |
   youtube-dl is a small command-line program to download videos from
@@ -18,12 +18,12 @@ apps:
 
 parts:
   youtube-dl:
-    source: https://github.com/rg3/youtube-dl/archive/2017.10.29.tar.gz
+    source: https://github.com/rg3/youtube-dl/archive/2017.12.28.tar.gz
     plugin: python
     python-version: python3
 
   ffmpeg:
-    source: https://ffmpeg.org/releases/ffmpeg-3.4.tar.xz
+    source: https://ffmpeg.org/releases/ffmpeg-3.4.1.tar.xz
     plugin: autotools
     configflags: [--enable-gpl, --disable-doc, --enable-libass, --enable-libfreetype, --enable-libmp3lame, --enable-libopus, --enable-libtheora, --enable-libvorbis, --enable-libvpx, --enable-libx264, --enable-libx265, --enable-nonfree]
     build-packages:
