@@ -1,5 +1,5 @@
 name: youtube-dl-casept
-version: "2018.01.27"
+version: "2018.02.08"
 summary: YouTube Downloader. READ FULL DESCRIPTION TO DOWNLOAD TO EXTERNAL STORAGE.
 description: |
   youtube-dl is a small command-line program to download videos from
@@ -18,7 +18,7 @@ apps:
 
 parts:
   youtube-dl:
-    source: https://github.com/rg3/youtube-dl/archive/2018.01.27.tar.gz
+    source: https://github.com/rg3/youtube-dl/archive/2018.02.08.tar.gz
     plugin: python
     python-version: python3
 
