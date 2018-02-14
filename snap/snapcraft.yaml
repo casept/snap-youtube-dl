@@ -25,7 +25,7 @@ parts:
   ffmpeg:
     source: https://ffmpeg.org/releases/ffmpeg-3.4.1.tar.xz
     plugin: autotools
-    configflags: [--enable-gpl, --disable-doc, --enable-libass, --enable-libfreetype, --enable-libmp3lame, --enable-libopus, --enable-libtheora, --enable-libvorbis, --enable-libvpx, --enable-libx264, --enable-libx265, --enable-nonfree]
+    configflags: [--enable-openssl, --enable-gpl, --disable-doc, --enable-libass, --enable-libfreetype, --enable-libmp3lame, --enable-libopus, --enable-libtheora, --enable-libvorbis, --enable-libvpx, --enable-libx264, --enable-libx265, --enable-nonfree]
     build-packages:
       - git
       - g++
@@ -52,6 +52,7 @@ parts:
       - libx264-dev
       - libmp3lame-dev
       - libopus-dev
+      - libssl-dev
       - libx265-dev
       - libvpx-dev
     organize:
