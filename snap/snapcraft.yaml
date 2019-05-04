@@ -8,6 +8,7 @@ description: |
   sudo snap connect youtube-dl-casept:removable-media core:removable-media
   after installation
 
+base: core18
 grade: stable
 confinement: strict
 
@@ -55,5 +56,40 @@ parts:
       - libssl-dev
       - libx265-dev
       - libvpx-dev
+    stage-packages:
+      - libx11-6
+      - libxau6
+      - libxdmcp6
+      - libxext6
+      - libxrender1
+      - libasound2
+      - libass9
+      - libcairo2
+      - libdrm2
+      - libfontconfig1
+      - libfreetype6
+      - libfribidi0
+      - libgraphite2-3
+      - libharfbuzz0b
+      - libmp3lame0
+      - libnuma1
+      - libogg0
+      - libopus0
+      - libpixman-1-0
+      - libpng16-16
+      - libtheora0
+      - libva-drm2
+      - libva2
+      - libvdpau1
+      - libvorbis0a
+      - libvorbisenc2
+      - libvpx5
+      - libx264-152
+      - libx265-146
+      - libxcb-render0
+      - libxcb-shape0
+      - libxcb-shm0
+      - libxcb-xfixes0
+      - libxcb1
     organize:
       usr/local/bin: usr/bin
