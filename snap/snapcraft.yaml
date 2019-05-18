@@ -17,6 +17,11 @@ apps:
     command: env LC_ALL=C.UTF-8 ${SNAP}/bin/youtube-dl
     plugs: [home, network, network-bind, removable-media]
 
+  # Same as youtube-dl, useful so that the user only has to type youtube-dl-casept instead of youtube-dl-casept.youtube-dl
+  youtube-dl-casept:
+    command: env LC_ALL=C.UTF-8 ${SNAP}/bin/youtube-dl
+    plugs: [home, network, network-bind, removable-media]
+
 parts:
   youtube-dl:
     source: https://github.com/rg3/youtube-dl/archive/2019.04.30.tar.gz
